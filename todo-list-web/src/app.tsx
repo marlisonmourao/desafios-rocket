@@ -17,6 +17,10 @@ export function App() {
   const [tasksCompleted, setTasksCompleted] = useState<string[]>([])
 
   async function handleCreateTask() {
+    if (title.trim().length === 0) {
+      return alert('Digite uma tarefa')
+    }
+
     const newArray = [...tasks, title]
 
     setTasks(newArray)
