@@ -1,4 +1,4 @@
-<h1 align="center">Todo List Web</h1>
+<h1 align="center">Todo List Mobile</h1>
 
 <p align="center">
 <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -8,9 +8,12 @@
 
 <br>
 
-<p align="center">
-  <img alt="capa" src=".github/todo-empty.png" width="100%">
-</p>
+## 🚀 Telas
+
+<div align="center" style="display: flex; gap: 20px; height: 400px; width: 100%; align-items: center; justify-content: center;">
+  <img alt="screen1" src=".github/screen1-todo-list-mobile.png">
+<img alt="screen1" src=".github/screen2-todo-list-mobile.png">
+</div>
 
 ## 🚀 Objetivos
 
@@ -18,7 +21,7 @@ Esta é uma aplicação web simples para ajudá-lo a organizar suas tarefas diá
 
 ## 🚀 Figma
 
-- [Layout do projeto (Clique aqui)](<https://www.figma.com/file/f43jYXBw1ajKfIZb4LazVH/ToDo-List-%E2%80%A2-Desafio-React-(Copy)?type=design&node-id=56-96&mode=design&t=GmyG2YS4K4Rvru4q-0>)
+- [Layout do projeto (Clique aqui)](<https://www.figma.com/file/pte7JcjbyHluXgPOJ7XLdn/ToDo-List-%E2%80%A2-Desafio-React-Native-(Copy)?type=design&node-id=401-128&mode=design&t=Z6QCZLkSraO5Q5af-0>)
 
 # 💻 Clonando o projeto para sua máquina
 
@@ -34,16 +37,16 @@ $ git clone https://github.com/marlisonmourao/desafios-rocket.git
 $ cd desafios-rocket
 
 # Entrar na pasta do app
-$ cd todo-list-web
+$ cd todo-list-mobile
 
 # Para baixar as dependências do projeto
-$ pnpm install ou pnpm i
+$ npm install ou npm i
 
 # Abra com o editor vscode
 $ code .
 
 # Rode o projeto
-$ pnpm run dev
+$ npx expo start
 ```
 
 4. Pronto, agora basta testar e fazer as alterações que desejar.
@@ -51,7 +54,7 @@ $ pnpm run dev
 <br>
 <br>
 
-<p align="center"><img height="300px" alt="computer"  src=".github/computer.png" /></p>
+<p align="center"><img height="300px" alt="computer"  src="../.github/computer.png" /></p>
 <br>
 <br>
 
