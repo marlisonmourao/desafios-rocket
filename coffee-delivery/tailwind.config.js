@@ -7,7 +7,8 @@ export default {
     extend: {
       colors,
       fontFamily: {
-        body: 'Roboto, sans-serif',
+        body: 'Roboto',
+        title: 'Baloo 2',
       },
     },
   },
