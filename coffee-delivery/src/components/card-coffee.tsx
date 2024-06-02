@@ -1,7 +1,8 @@
-import { Minus, Plus, ShoppingCart } from 'phosphor-react'
 import { useState } from 'react'
 
 import { useCoffeeOrder } from '@/context/coffee-context'
+
+import { BuyCard } from './buy-card'
 
 interface CardCoffeeProps {
   name: string
@@ -39,6 +40,8 @@ export function CardCoffee({ items }: Props) {
     setQuantity(1)
   }
 
+  const price = items.price * quantity
+
   return (
     <div className="flex w-72 flex-col items-center rounded-bl-[32px] rounded-br-md rounded-tl-md rounded-tr-[32px] bg-base-card px-6">
       <div className="flex flex-col items-center justify-center">
@@ -62,33 +65,24 @@ export function CardCoffee({ items }: Props) {
         <span className="text-center text-sm">{items.details}</span>
       </div>
 
-      <div className="mt-8 flex w-full items-center justify-between pb-5">
+      <div className="mt-8 flex w-full items-center justify-between gap-3 pb-5">
         <div>
           <span className="text-base text-base-text">
-            R${' '}
-            <span className="font-title text-2xl font-bold text-base-text">
-              {items.price}
+            <span className="font-title text-xl font-bold text-base-text">
+              {price.toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              })}
             </span>
           </span>
         </div>
 
-        <div className="flex items-center gap-2">
-          <div className="flex items-center gap-1 rounded-md bg-base-button p-2">
-            <button onClick={minusCoffeeQuantity}>
-              <Minus size={22} />
-            </button>
-            <span className="text-lg">{quantity}</span>
-            <button onClick={addCoffeeQuantity}>
-              <Plus size={22} />
-            </button>
-          </div>
-          <button
-            className="rounded-lg bg-purple-dark p-2"
-            onClick={handleCoffeeOrders}
-          >
-            <ShoppingCart size={30} className="text-white" />
-          </button>
-        </div>
+        <BuyCard
+          addCoffeeQuantity={addCoffeeQuantity}
+          minusCoffeeQuantity={minusCoffeeQuantity}
+          handleCoffeeOrders={handleCoffeeOrders}
+          quantity={quantity}
+        />
       </div>
     </div>
   )

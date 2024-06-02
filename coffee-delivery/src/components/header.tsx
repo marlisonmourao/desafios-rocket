@@ -8,7 +8,9 @@ export function Header() {
 
   return (
     <header className="flex w-full items-center justify-between">
-      <img src="./logo.svg" alt="" />
+      <Link to="/">
+        <img src="./logo.svg" alt="" />
+      </Link>
 
       <div className="flex items-center gap-3">
         <div className="flex gap-2 rounded-md bg-purple-light p-2">
